@@ -47,8 +47,16 @@ export function ParticleField() {
       seed();
     };
 
+    const colors = () => {
+      const light = document.documentElement.getAttribute("data-theme") === "light";
+      return light
+        ? { dot: "rgba(14, 154, 138, 0.42)", line: "rgba(14, 154, 138, " }
+        : { dot: "rgba(30, 200, 176, 0.7)", line: "rgba(20, 159, 140, " };
+    };
+
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
+      const palette = colors();
 
       for (let i = 0; i < particles.length; i += 1) {
         const a = particles[i];
@@ -58,7 +66,7 @@ export function ParticleField() {
           const dy = a.y - b.y;
           const dist = Math.hypot(dx, dy);
           if (dist > 130) continue;
-          ctx.strokeStyle = `rgba(20, 159, 140, ${0.12 * (1 - dist / 130)})`;
+          ctx.strokeStyle = `${palette.line}${0.12 * (1 - dist / 130)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -69,7 +77,7 @@ export function ParticleField() {
 
       for (const particle of particles) {
         ctx.beginPath();
-        ctx.fillStyle = "rgba(30, 200, 176, 0.7)";
+        ctx.fillStyle = palette.dot;
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
       }
@@ -93,9 +101,12 @@ export function ParticleField() {
     if (!reduce) frame = window.requestAnimationFrame(tick);
 
     window.addEventListener("resize", resize);
+    const themeWatch = new MutationObserver(() => draw());
+    themeWatch.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
     return () => {
       window.cancelAnimationFrame(frame);
       window.removeEventListener("resize", resize);
+      themeWatch.disconnect();
     };
   }, []);
 

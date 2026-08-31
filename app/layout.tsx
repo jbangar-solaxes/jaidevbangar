@@ -85,7 +85,14 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${display.variable} ${ui.variable} h-full antialiased`}>
+    <html lang="en" className={`${display.variable} ${ui.variable} h-full antialiased`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var p="dark";try{p=localStorage.getItem("theme")||"dark"}catch(e){}if(p!=="light"&&p!=="dark")p="dark";document.documentElement.setAttribute("data-theme",p)})();`,
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}

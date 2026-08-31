@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { CloseIcon, GitHubIcon, LinkedInIcon, MenuIcon } from "@/components/Icons";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { nav, site } from "@/lib/site";
 
 export function SiteHeader() {
@@ -36,6 +37,8 @@ export function SiteHeader() {
         Skip to main content
       </a>
 
+      <ThemeToggle />
+
       <header className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between border-b border-line bg-background/90 px-4 backdrop-blur-md md:hidden">
         <Link
           href="/"
@@ -65,7 +68,7 @@ export function SiteHeader() {
 
       <aside
         id={menuId}
-        className={`site-rail fixed inset-y-0 right-0 z-50 flex w-80 flex-col border-l border-line bg-[#101318]/92 backdrop-blur-md ${
+        className={`site-rail fixed inset-y-0 right-0 z-50 flex w-80 flex-col border-l border-line backdrop-blur-md ${
           open ? "is-drawer-open" : ""
         }`}
       >
