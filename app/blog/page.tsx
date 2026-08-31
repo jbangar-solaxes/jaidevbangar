@@ -28,12 +28,7 @@ export default function BlogPage() {
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
         <Reveal>
           <p className="max-w-2xl leading-8 text-white/65">
-            Selected writing on WordPress, Laravel, and keeping sites reliable
-            after they ship. Older profile notes also live on{" "}
-            <a href={site.wordpress} target="_blank" rel="noreferrer" className="text-accent">
-              WordPress.org
-            </a>
-            .
+            Have a look at my posts below. Click a title to read the full article.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-5">
