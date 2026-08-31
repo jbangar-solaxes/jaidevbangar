@@ -156,6 +156,7 @@ export const rotatingTitles = [
   "Full Stack Engineer",
   "Technical Lead",
   "Laravel Specialist",
+  "WordPress Developer",
   "Project Manager",
   "AI Engineer",
 ];
