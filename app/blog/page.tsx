@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ExternalIcon } from "@/components/Icons";
 import { PageLayout } from "@/components/PageLayout";
 import { Reveal } from "@/components/Reveal";
-import { site } from "@/lib/site";
+import { posts, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -27,14 +28,39 @@ export default function BlogPage() {
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
         <Reveal>
           <p className="max-w-2xl leading-8 text-white/65">
-            I have not published posts on this site yet. When I do, they will
-            sit here. Older profile notes also live on{" "}
+            Selected writing on WordPress, Laravel, and keeping sites reliable
+            after they ship. Older profile notes also live on{" "}
             <a href={site.wordpress} target="_blank" rel="noreferrer" className="text-accent">
-              WordPress
+              WordPress.org
             </a>
             .
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+        </Reveal>
+        <div className="mt-12 grid gap-5">
+          {posts.map((post, index) => (
+            <Reveal key={post.href} delay={index * 70}>
+              <article className="card-lift flex h-full flex-col border border-line bg-surface p-6">
+                <p className="font-sans text-[11px] tracking-[0.2em] text-accent uppercase">
+                  {post.category} · {post.date}
+                </p>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-white">
+                  <a
+                    href={post.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-start gap-2 no-underline hover:text-accent"
+                  >
+                    {post.title}
+                    <ExternalIcon className="mt-1.5 h-4 w-4 shrink-0" />
+                  </a>
+                </h2>
+                <p className="mt-3 flex-1 text-sm leading-7 text-white/60">{post.summary}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={140}>
+          <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-solid">
               Get in touch
             </Link>

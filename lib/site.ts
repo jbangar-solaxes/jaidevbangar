@@ -407,3 +407,22 @@ export const projects = [
     tags: ["Web"],
   },
 ];
+
+export const posts = [
+  {
+    title: "Why Hire Dedicated WordPress Developer for Your Business in 2026?",
+    date: "18 Jul 2026",
+    category: "WordPress",
+    href: "https://solaxes.com/hire-dedicated-wordpress-developer/",
+    summary:
+      "When a WordPress site starts taking too much time or breaking in production, one dedicated developer is more reliable than a new freelancer for every fix. This piece covers when that hire makes sense, what they actually do, and how to keep ownership of your accounts.",
+  },
+  {
+    title: "Laravel: Mastering Background Jobs for Smoother Applications",
+    date: "27 Oct 2025",
+    category: "Laravel",
+    href: "https://technicaljai.com/laravel-masterig-background-jobs-for-smoother-applications/",
+    summary:
+      "Move emails, PDFs, imports, and API work off the request so Laravel apps stay fast. The post covers queue drivers, workers, Horizon, chains and batches, and how to write jobs that are safe to retry.",
+  },
+];
