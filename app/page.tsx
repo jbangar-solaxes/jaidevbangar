@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ConnectLinks } from "@/components/ConnectLinks";
@@ -7,6 +8,15 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TypedRoles } from "@/components/TypedRoles";
 import { experience, projects, services, site, skillGroups, stats } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+  },
+};
 
 export default function HomePage() {
   const featured = projects.slice(0, 6);

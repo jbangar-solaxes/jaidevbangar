@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       {
         source: "/lander",
         destination: "/",
-        permanent: true,
+        statusCode: 301,
       },
     ];
   },

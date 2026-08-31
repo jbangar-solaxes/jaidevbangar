@@ -16,7 +16,7 @@ const ui = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jaidevbangar.info"),
+  metadataBase: new URL("https://jaidevbangar.info/"),
   title: {
     default: site.name,
     template: `${site.name} - %s`,
