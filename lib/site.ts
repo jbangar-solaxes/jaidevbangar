@@ -138,7 +138,7 @@ export const skillGroups = [
   },
   {
     label: "Practice",
-    items: ["APIs", "Git", "GitHub", "GitLab", "Gitflow", "DSA"],
+    items: ["APIs", "Git", "GitHub", "GitLab", "Gitflow", "DSA", "AI"],
   },
 ];
 
@@ -174,8 +174,8 @@ export const services = [
     title: "Full Stack Development",
     eyebrow: "End to end",
     summary:
-      "End-to-end web applications in PHP, Laravel, React, Vue, and Next.js — from first plan to production.",
-    tags: ["PHP", "Laravel", "React", "Vue.js", "Next.js"],
+      "End-to-end web applications in PHP, Laravel, React, Vue, Next.js, and AI — from first plan to production.",
+    tags: ["PHP", "Laravel", "React", "Vue.js", "Next.js", "AI"],
   },
   {
     number: "02",
@@ -224,7 +224,7 @@ export const serviceEngagements = [
     title: "Engineering",
     eyebrow: "Project-based",
     summary:
-      "Build, extend, or modernise a production web application — PHP, Laravel, Vue, React, or Next.js.",
+      "Build, extend, or modernise a production web application — PHP, Laravel, Vue, React, Next.js, or AI.",
   },
   {
     title: "Existing systems",
@@ -249,7 +249,7 @@ export const facts = [
   { label: "Current role", value: "Sr. Software Engineer, Share A Refund" },
   { label: "Experience", value: `${site.years} years in web application development` },
   { label: "Location", value: "Jalandhar, Punjab, India" },
-  { label: "Focus", value: "Laravel, Vue.js, React, Next.js, PHP" },
+  { label: "Focus", value: "Laravel, Vue.js, React, Next.js, PHP, AI" },
   { label: "Languages", value: "English, Hindi, Punjabi" },
   { label: "Working style", value: "End-to-end ownership, from plan to production" },
   { label: "Strengths", value: "Architecture, APIs, server management, mentoring" },

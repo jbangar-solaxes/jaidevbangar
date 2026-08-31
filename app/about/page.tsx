@@ -55,7 +55,7 @@ export default function AboutPage() {
                 Over the past {site.years} years I have worked as a software engineer,
                 technical lead, and independent developer. I have used PHP and MVC
                 frameworks (Laravel, CakePHP, Zend, Laminas, Symfony, CodeIgniter),
-                along with React, Vue, Nuxt, Node, Next.js, and JavaScript, and I
+                along with React, Vue, Nuxt, Node, Next.js, JavaScript, and AI, and I
                 have managed the servers those systems run on.
               </p>
               <p>
