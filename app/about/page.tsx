@@ -52,7 +52,7 @@ export default function AboutPage() {
                 reliable after they ship.
               </p>
               <p>
-                Over the past 16+ years I have worked as a software engineer,
+                Over the past {site.years} years I have worked as a software engineer,
                 technical lead, and independent developer. I have used PHP and MVC
                 frameworks (Laravel, CakePHP, Zend, Laminas, Symfony, CodeIgniter),
                 along with React, Vue, Nuxt, Node, Next.js, and JavaScript, and I

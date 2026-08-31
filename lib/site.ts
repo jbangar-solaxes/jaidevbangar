@@ -14,7 +14,7 @@ export const site = {
   resumeHref: "/jaidev-bangar-resume.pdf",
   years: "18+",
   summary:
-    "Full-stack engineer with 16+ years of experience building and running web applications for startups, agencies, and product companies.",
+    "Full-stack engineer with 18+ years of experience building and running web applications for startups, agencies, and product companies.",
   intro:
     "I'm Jaidev Bangar, a senior full-stack engineer in Jalandhar, Punjab. I build and run web applications for startups and product companies — from first plan through production.",
 };
@@ -247,7 +247,7 @@ export const stats = [
 
 export const facts = [
   { label: "Current role", value: "Sr. Software Engineer, Share A Refund" },
-  { label: "Experience", value: "16+ years in web application development" },
+  { label: "Experience", value: `${site.years} years in web application development` },
   { label: "Location", value: "Jalandhar, Punjab, India" },
   { label: "Focus", value: "Laravel, Vue.js, React, Next.js, PHP" },
   { label: "Languages", value: "English, Hindi, Punjabi" },
