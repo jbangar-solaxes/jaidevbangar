@@ -8,6 +8,18 @@ import { education, experience, languages, site, skillGroups } from "@/lib/site"
 export const metadata: Metadata = {
   title: "Resume (CV)",
   description: `Resume of ${site.name}, ${site.title}.`,
+  alternates: { canonical: "/resume" },
+  openGraph: {
+    title: `${site.name} - Resume (CV)`,
+    description: `Resume of ${site.name}, ${site.title}.`,
+    url: "/resume",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — ${site.title}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} - Resume (CV)`,
+    description: `Resume of ${site.name}, ${site.title}.`,
+  },
 };
 
 export default function ResumePage() {

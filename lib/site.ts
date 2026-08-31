@@ -2,17 +2,21 @@ export const site = {
   name: "Jaidev Bangar",
   title: "Sr. Software Engineer / Full Stack Engineer",
   location: "Jalandhar, Punjab, India",
+  url: "https://jaidevbangar.info",
   email: "jaidev.bangar@gmail.com",
   phone: "+91-90410-79638",
   phoneHref: "tel:+919041079638",
   linkedin: "https://www.linkedin.com/in/jaidevbangar",
   github: "https://github.com/solaxes",
   twitter: "https://x.com/jaidev_bangar",
+  twitterHandle: "@jaidev_bangar",
   wordpress: "https://profiles.wordpress.org/solaxes/",
   resumeHref: "/jaidev-bangar-resume.pdf",
   years: "18+",
   summary:
     "Full-stack engineer with 16+ years of experience building and running web applications for startups, agencies, and product companies.",
+  intro:
+    "I'm Jaidev Bangar, a senior full-stack engineer in Jalandhar, Punjab. I build and run web applications for startups and product companies — from first plan through production.",
 };
 
 export const nav = [

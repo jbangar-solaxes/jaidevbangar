@@ -9,6 +9,18 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description: `Contact ${site.name} by email, phone, GitHub, or LinkedIn.`,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: `${site.name} - Contact`,
+    description: `Contact ${site.name} by email, phone, GitHub, or LinkedIn.`,
+    url: "/contact",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — ${site.title}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} - Contact`,
+    description: `Contact ${site.name} by email, phone, GitHub, or LinkedIn.`,
+  },
 };
 
 export default function ContactPage() {

@@ -7,6 +7,18 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Blog",
   description: `Notes and writing by ${site.name}.`,
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: `${site.name} - Blog`,
+    description: `Notes and writing by ${site.name}.`,
+    url: "/blog",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — ${site.title}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} - Blog`,
+    description: `Notes and writing by ${site.name}.`,
+  },
 };
 
 export default function BlogPage() {

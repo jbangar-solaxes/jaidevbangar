@@ -15,6 +15,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "/",
+    title: `${site.name} | ${site.title}`,
+    description: site.intro,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${site.name} — ${site.title}`,
+      },
+    ],
   },
 };
 

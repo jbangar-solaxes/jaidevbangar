@@ -10,6 +10,18 @@ import { facts, site, skillGroups } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description: `About ${site.name}, senior full-stack engineer based in ${site.location}.`,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: `${site.name} - About`,
+    description: `About ${site.name}, senior full-stack engineer based in ${site.location}.`,
+    url: "/about",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — ${site.title}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} - About`,
+    description: `About ${site.name}, senior full-stack engineer based in ${site.location}.`,
+  },
 };
 
 export default function AboutPage() {

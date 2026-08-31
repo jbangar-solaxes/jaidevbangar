@@ -7,6 +7,18 @@ import { projects, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Projects",
   description: `Selected product and client work by ${site.name}.`,
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    title: `${site.name} - Projects`,
+    description: `Selected product and client work by ${site.name}.`,
+    url: "/projects",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — ${site.title}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} - Projects`,
+    description: `Selected product and client work by ${site.name}.`,
+  },
 };
 
 export default function ProjectsPage() {

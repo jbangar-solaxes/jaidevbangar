@@ -8,6 +8,18 @@ import { serviceEngagements, serviceProcess, services, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Services",
   description: `Engineering services from ${site.name}: full-stack development, architecture, APIs, Laravel and Vue, and server work.`,
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: `${site.name} - Services`,
+    description: `Engineering services from ${site.name}: full-stack development, architecture, APIs, Laravel and Vue, and server work.`,
+    url: "/services",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name} — ${site.title}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} - Services`,
+    description: `Engineering services from ${site.name}: full-stack development, architecture, APIs, Laravel and Vue, and server work.`,
+  },
 };
 
 export default function ServicesPage() {
